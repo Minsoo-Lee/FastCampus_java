@@ -1,4 +1,4 @@
-package ch02;
+package ch04;
 
 public class Customer {
     protected int customerId;
@@ -31,9 +31,17 @@ public class Customer {
         return customerGrade;
     }
 
-    public Customer() {
+//    public Customer() {
+//        customerGrade = "SILVER";
+//        bonusRatio = 0.01;
+//        System.out.println("Customer() call");
+//    }
+
+    public Customer(int customerId, String customerName) {
+        this.customerId = customerId;
+        this.customerName = customerName;
+
         customerGrade = "SILVER";
-        bonusRatio = 0.01;
     }
     public int calcPrice(int price) {
         bonusPoint += price * bonusRatio;
